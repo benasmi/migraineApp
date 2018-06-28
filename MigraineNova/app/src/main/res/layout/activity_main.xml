@@ -6,4 +6,116 @@
     android:layout_height="match_parent"
     tools:context="com.solution.migraine.migrainenova.MainActivity">
 
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/my_toolbar"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Pažink migreną"
+            android:layout_gravity="left"
+            android:textColor="#FFF"
+            android:gravity="left"
+            android:textSize="17dp"
+            android:id="@+id/toolbar_title" />
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/img_shoping_cart"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_shopping_cart"
+            />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_height="400dp"
+        android:layout_marginTop="15dp"
+        android:columnCount="2"
+        android:padding="5dp"
+        android:rowCount="2">
+
+        <android.support.v7.widget.AppCompatButton
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:text="Migrenos diagnostikos klausimynas"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:id="@+id/btn_migraine_diagnostics"
+            android:textColor="#FFFFFF"
+            android:onClick="btn_diagnostics"
+            android:background="@drawable/rounded_button_diagnostics"
+            android:textAllCaps="false"
+            />
+        <android.support.v7.widget.AppCompatButton
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:layout_rowWeight="1"
+            android:padding="10dp"
+            android:onClick="btn_difficulty"
+            android:textColor="#FFFFFF"
+            android:id="@+id/btn_migraine_difficulty"
+            android:text="Migrenos sunkumo klausimynas"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_button_questions"
+            />
+        <android.support.v7.widget.AppCompatButton
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Migrenos gydymo galimybės"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rounded_button_treatment"
+            android:layout_margin="5dp"
+            android:onClick="btn_treatment"
+            android:padding="10dp"
+            android:id="@+id/btn_migraine_treatment"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            />
+        <android.support.v7.widget.AppCompatButton
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Migrenos migrenos dienynas"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:layout_margin="5dp"
+            android:onClick="btn_diary"
+            android:id="@+id/btn_migraine_diary"
+            android:background="@drawable/rounded_button_diary"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            />
+
+    </GridLayout>
+
+
 </RelativeLayout>
