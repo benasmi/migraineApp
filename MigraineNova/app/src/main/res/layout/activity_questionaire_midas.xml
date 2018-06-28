@@ -16,27 +16,26 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-
-        <TextView
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:text="Pažink migreną"
-            android:layout_gravity="left"
-            android:textColor="#FFF"
-            android:gravity="left"
-            android:textSize="17dp"
-            android:id="@+id/toolbar_title" />
-
-
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/img_shoping_cart"
-            android:layout_gravity="right"
+            android:id="@+id/arrow_back"
+            android:layout_gravity="left"
             android:layout_marginRight="20dp"
-            android:background="@drawable/ic_shopping_cart"
+            android:background="@drawable/ic_arrow"
             />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Migrenos sudėtingumas"
+            android:layout_gravity="left"
+            android:textColor="#FFF"
+            android:gravity="left"
+            android:textSize="20dp"
+
+            android:id="@+id/toolbar_title" />
 
 
     </android.support.v7.widget.Toolbar>
@@ -63,7 +62,7 @@
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textColor="#000"
-                    android:text="Kiiek dienų per pastaruosius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    android:text="Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
                     />
 
 
@@ -90,7 +89,7 @@
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textColor="#000"
-                    android:text="Kiiek dienų per pastaruosius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    android:text="Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo Jūsų darbingumas arba gebėjimas mokytis buvo labai sumažėjęs, t.y. per pusę arba daugiau (neskaičiuokite pirmojo klausimo dienų, kada nebuvote darbe arba mokymo įstaigoje)?"
                     />
 
 
@@ -115,7 +114,7 @@
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textColor="#000"
-                    android:text="Kiiek dienų per pastaruosius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    android:text="Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo visiškai negalėjote užsiimti namų ruoša? "
                     />
 
 
@@ -140,7 +139,7 @@
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textColor="#000"
-                    android:text="Kiiek dienų per pastaruosius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    android:text="Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo Jūsų gebėjimas užsiimti namų ruoša buvo labai sumažėjęs, t.y. per pusę arba daugiau (neskaičiuokite trečiojo klausimo dienų, kada visiškai negalėjote užsiimti namų ruoša)? "
                     />
 
 
@@ -165,7 +164,7 @@
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textColor="#000"
-                    android:text="Kiiek dienų per pastaruosius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    android:text="Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo nebendravote su šeimos nariais, nukentėjo Jūsų visuomeninė veikla, laisvalaikis?"
                     />
 
 
@@ -190,7 +189,7 @@
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textColor="#000"
-                    android:text="Kiiek dienų per pastaruosius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    android:text="Kiek dienų per paskutinius 3 mėnesius jums skaudėjo galvą?"
                     />
 
 
@@ -216,8 +215,23 @@
                 android:textSize="18dp"
                 android:padding="10dp"
                 android:textColor="#000"
-                android:text="blablabla?"/>
+                android:text="Koks buvo vidutinis galvos skausmo stiprumas pagal skalę nuo 0 iki 10?"/>
 
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:dsb_min="1"
+                app:dsb_max="10"
+                app:dsb_trackColor="#fff"
+                app:dsb_progressColor="@color/colorAccent"
+                app:dsb_indicatorColor="@color/colorAccent"
+                android:id="@+id/max_duration_slider"
+                app:dsb_thumbSize="20dp"
+                app:dsb_trackHeight="10dp"
+                app:dsb_scrubberHeight="10dp"
+                app:dsb_value="5"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
 
 
         </LinearLayout>

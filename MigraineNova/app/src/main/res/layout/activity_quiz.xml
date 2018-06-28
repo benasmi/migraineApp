@@ -20,27 +20,27 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
 
-
-            <TextView
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:text="Pažink migreną"
-                android:layout_gravity="left"
-                android:textColor="#FFF"
-                android:gravity="left"
-                android:textSize="17dp"
-                android:id="@+id/toolbar_title" />
-
-
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:id="@+id/img_shoping_cart"
-                android:layout_gravity="right"
+                android:id="@+id/arrow_back"
+                android:layout_gravity="left"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/ic_shopping_cart"
+                android:background="@drawable/ic_arrow"
                 />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Ar sergate migrena?"
+                android:layout_gravity="left"
+                android:textColor="#FFF"
+                android:gravity="left"
+                android:textSize="20dp"
+                android:id="@+id/toolbar_title" />
+
+
 
 
         </android.support.v7.widget.Toolbar>
