@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.solution.migraine.migrainenova.QuestionaireMIDAS">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/my_toolbar"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Pažink migreną"
+            android:layout_gravity="left"
+            android:textColor="#FFF"
+            android:gravity="left"
+            android:textSize="17dp"
+            android:id="@+id/toolbar_title" />
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/img_shoping_cart"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_shopping_cart"
+            />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:text="Kiiek dienų per pastaruosius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    />
+
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Jūsų atsakymas"
+                    android:id="@+id/first_question_ans" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:text="Kiiek dienų per pastaruosius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    />
+
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Jūsų atsakymas"
+                    android:id="@+id/second_question_ans" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:text="Kiiek dienų per pastaruosius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    />
+
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Jūsų atsakymas"
+                    android:id="@+id/third_question_ans" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:text="Kiiek dienų per pastaruosius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    />
+
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Jūsų atsakymas"
+                    android:id="@+id/fourth_question_ans" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:text="Kiiek dienų per pastaruosius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    />
+
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Jūsų atsakymas"
+                    android:id="@+id/fifth_question_ans" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:text="Kiiek dienų per pastaruosius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    />
+
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Jūsų atsakymas"
+                    android:id="@+id/sixth_question_ans" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:text="blablabla?"/>
+
+
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

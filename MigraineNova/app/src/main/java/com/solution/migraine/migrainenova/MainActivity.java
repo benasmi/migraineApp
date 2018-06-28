@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn_difficulty(View view) {
-
+        startActivity(new Intent(this, QuestionaireMIDAS.class));
 
     }
 
