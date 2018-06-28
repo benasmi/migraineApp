@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.solution.migraine.migrainenova.QuizActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Ar jūs įtariate, kad turite migreną?"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/text_view_question"
+                    android:layout_toRightOf="@+id/image_view_question_indicator"/>
+
+            </RelativeLayout>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/first_question_positive_button"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="50dp"
+                    android:text="TAIP"/>
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:id="@+id/first_question_negative_button"
+                    android:text="NE"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:layout_height="match_parent" />
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Ar jūs įtariate, kad turite migreną?"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/text_view_question"
+                    android:layout_toRightOf="@+id/image_view_question_indicator"/>
+
+            </RelativeLayout>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/second_question_positive_button"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="50dp"
+                    android:text="TAIP"/>
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:id="@+id/second_question_negative_button"
+                    android:text="NE"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:layout_height="match_parent" />
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Ar jūs įtariate, kad turite migreną?"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/text_view_question"
+                    android:layout_toRightOf="@+id/image_view_question_indicator"/>
+
+            </RelativeLayout>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/third_question_positive_button"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="50dp"
+                    android:text="TAIP"/>
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:id="@+id/third_question_negative_button"
+                    android:text="NE"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:layout_height="match_parent" />
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diagnozė"
+            android:id="@+id/text_diagnosis"
+            android:textSize="20dp"
+            android:visibility="gone"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorAccent"
+        android:text="Gauti rezultatus"
+        android:onClick="getResults"
+        android:id="@+id/button_submit"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+</RelativeLayout>
+
+
+
