@@ -53,6 +53,22 @@ public class QuizActivity extends AppCompatActivity {
                 (third_question_negative_button.isChecked() || third_question_positive_button.isChecked());
     }
 
+    private int positiveCount(){
+        int numberCount = 0;
+        if(first_question_positive_button.isChecked()){
+            numberCount++;
+        }
+        if(second_question_positive_button.isChecked()){
+            numberCount++;
+        }
+        if(third_question_positive_button.isChecked()){
+            numberCount++;
+        }
+
+        return numberCount;
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,7 +109,15 @@ public class QuizActivity extends AppCompatActivity {
     public void getResults(View view) {
         if(areAllQuestionsAnswered()){
             textView_diagnosis.setVisibility(View.VISIBLE);
-            textView_diagnosis.setText("Deja, jūs sergate migrena");
+
+            if(positiveCount()==3){
+                textView_diagnosis.setText("Jūs sergate Migrena, kreipkitės į savo gydytoją dėl gydymo ir formos patikslinimo.");
+            }else if(positiveCount()==2){
+                textView_diagnosis.setText("Dėl papildomo diagnozės patikslinimo reikia atlikti tyrimus, kuriuos Jums pasiulys Šeimos Gydytojas.");
+            }else if(positiveCount()==1 || positiveCount()==0){
+                textView_diagnosis.setText("Jūs nesergate migrena.");
+            }
+
         }else{
             textView_diagnosis.setVisibility(View.GONE);
         }
