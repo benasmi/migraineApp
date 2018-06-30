@@ -3,9 +3,14 @@ package com.solution.migraine.migrainenova;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import android.support.v7.widget.AppCompatButton;
+import android.text.method.KeyListener;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class QuestionaireMIDAS extends AppCompatActivity {
 
@@ -16,6 +21,9 @@ public class QuestionaireMIDAS extends AppCompatActivity {
     private EditText fourth_question_ans;
     private EditText fifth_question_ans;
     private EditText sixth_question_ans;
+    private TextView results;
+
+    private AppCompatButton button_submit;
 
 
     @Override
@@ -23,8 +31,6 @@ public class QuestionaireMIDAS extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionaire_midas);
         Utils.changeNotifBarColor(Color.parseColor("#6200EE"),getWindow());
-
-
     }
 
     private void initializeViews(){
@@ -36,7 +42,69 @@ public class QuestionaireMIDAS extends AppCompatActivity {
             }
         });
 
+        first_question_ans = (EditText) findViewById(R.id.first_question_ans);
+        second_question_ans = (EditText) findViewById(R.id.second_question_ans);
+        third_question_ans = (EditText) findViewById(R.id.third_question_ans);
+        fourth_question_ans = (EditText) findViewById(R.id.fourth_question_ans);
+        fifth_question_ans = (EditText) findViewById(R.id.fifth_question_ans);
+        sixth_question_ans = (EditText) findViewById(R.id.sixth_question_ans);
+        button_submit = (AppCompatButton) findViewById(R.id.button_submit);
 
+        first_question_ans.setOnKeyListener(editTextKeyListener);
+        results = (TextView) findViewById(R.id.results);
+    }
 
+    private View.OnKeyListener editTextKeyListener = new View.OnKeyListener(){
+
+        @Override
+        public boolean onKey(View view, int i, KeyEvent keyEvent) {
+
+            if(areAllFieldsFilled()){
+                button_submit.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }else{
+                button_submit.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            }
+
+            return false;
+        }
+    };
+
+    private boolean areAllFieldsFilled(){
+        return  !first_question_ans.getText().toString().isEmpty() &&
+                !second_question_ans.getText().toString().isEmpty() &&
+                !third_question_ans.getText().toString().isEmpty() &&
+                !fourth_question_ans.getText().toString().isEmpty() &&
+                !fifth_question_ans.getText().toString().isEmpty() &&
+                !sixth_question_ans.getText().toString().isEmpty();
+    }
+
+    public void getResults(View view) {
+        if(areAllFieldsFilled()){
+
+            int totalDays = 0;
+            totalDays+=Integer.valueOf(first_question_ans.getText().toString());
+            totalDays+=Integer.valueOf(second_question_ans.getText().toString());
+            totalDays+=Integer.valueOf(third_question_ans.getText().toString());
+            totalDays+=Integer.valueOf(fourth_question_ans.getText().toString());
+            totalDays+=Integer.valueOf(fifth_question_ans.getText().toString());
+            totalDays+=Integer.valueOf(sixth_question_ans.getText().toString());
+
+            String result = "";
+
+            if(totalDays > 21){
+                result = "IV laipsnis. Labai didelė įtaka gyvenimo kokybei. Tikslinga svarstyti profilaktinio gydymo skyrimą.";
+            }else if(totalDays > 0 && totalDays <= 5){
+                result = "I laipsnis. Labai maža įtaka kasdieniai veiklai. Profilaktinis gydymas nedįdinkuotinas";
+            }else if(totalDays > 5 && totalDays <= 10){
+                result = "II laipsnis. Maža įtaka kasdienei veiklai. Profilaktinis gydymas gali būti svarstytinas esant galvos skausmui susijusiam su mėnesinių ciklu.";
+            }else if(totalDays > 10 && totalDays <= 20){
+                result = "III laipsnis Vidutine įtaka kasdienei veiklai. Profilaktinis gydymas gali būti svarstytinas esant galvos skausmui susijusiam su mėnesinių ciklu. ";
+            }
+
+            results.setText(result);
+            results.setVisibility(View.VISIBLE);
+        }else{
+            results.setVisibility(View.GONE);
+        }
     }
 }

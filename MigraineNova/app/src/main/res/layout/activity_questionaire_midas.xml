@@ -43,6 +43,7 @@
     <ScrollView
         android:layout_below="@+id/my_toolbar"
         android:layout_width="match_parent"
+        android:layout_above="@+id/button_submit"
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -72,6 +73,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
                     android:hint="Jūsų atsakymas"
+                    android:inputType="number"
                     android:id="@+id/first_question_ans" />
 
 
@@ -98,6 +100,7 @@
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
+                    android:inputType="number"
                     android:hint="Jūsų atsakymas"
                     android:id="@+id/second_question_ans" />
 
@@ -122,6 +125,7 @@
                 <EditText
                     android:layout_width="250dp"
                     android:layout_height="40dp"
+                    android:inputType="number"
                     android:layout_marginLeft="10dp"
                     android:hint="Jūsų atsakymas"
                     android:id="@+id/third_question_ans" />
@@ -147,6 +151,7 @@
                 <EditText
                     android:layout_width="250dp"
                     android:layout_height="40dp"
+                    android:inputType="number"
                     android:layout_marginLeft="10dp"
                     android:hint="Jūsų atsakymas"
                     android:id="@+id/fourth_question_ans" />
@@ -173,6 +178,7 @@
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
+                    android:inputType="number"
                     android:hint="Jūsų atsakymas"
                     android:id="@+id/fifth_question_ans" />
 
@@ -199,6 +205,7 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
                     android:hint="Jūsų atsakymas"
+                    android:inputType="number"
                     android:id="@+id/sixth_question_ans" />
 
             </LinearLayout>
@@ -206,6 +213,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:orientation="vertical"
             android:layout_marginTop="10dp">
 
@@ -237,13 +245,32 @@
         </LinearLayout>
 
 
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:padding="10dp"
+            android:textColor="#000"
+            android:visibility="gone"
+            android:id="@+id/results"/>
         </LinearLayout>
 
 
 
     </ScrollView>
 
-
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:text="Gauti rezultatus"
+        android:onClick="getResults"
+        android:id="@+id/button_submit"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
 
 
 
