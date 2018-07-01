@@ -33,7 +33,6 @@ public class QuizActivity extends AppCompatActivity {
     private AppCompatButton button_submit;
 
     private TextView textView_diagnosis;
-    private ImageView arrow_back;
 
     private View.OnClickListener radioButtonListener = new View.OnClickListener() {
         @Override
@@ -95,14 +94,7 @@ public class QuizActivity extends AppCompatActivity {
         third_question_negative_button = (RadioButton) findViewById(R.id.third_question_negative_button);
         button_submit = (AppCompatButton) findViewById(R.id.button_submit);
         textView_diagnosis = (TextView) findViewById(R.id.text_diagnosis);
-        arrow_back = (ImageView) findViewById(R.id.arrow_back);
 
-        arrow_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                QuizActivity.this.finish();
-            }
-        });
 
     }
 
@@ -121,5 +113,9 @@ public class QuizActivity extends AppCompatActivity {
         }else{
             textView_diagnosis.setVisibility(View.GONE);
         }
+    }
+
+    public void backPressed(View view) {
+        finish();
     }
 }

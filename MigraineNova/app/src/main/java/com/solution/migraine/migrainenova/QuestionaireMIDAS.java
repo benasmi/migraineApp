@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.support.v7.widget.AppCompatButton;
-import android.text.method.KeyListener;
-import android.view.KeyEvent;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -31,6 +31,7 @@ public class QuestionaireMIDAS extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionaire_midas);
         Utils.changeNotifBarColor(Color.parseColor("#6200EE"),getWindow());
+        initializeViews();
     }
 
     private void initializeViews(){
@@ -50,24 +51,15 @@ public class QuestionaireMIDAS extends AppCompatActivity {
         sixth_question_ans = (EditText) findViewById(R.id.sixth_question_ans);
         button_submit = (AppCompatButton) findViewById(R.id.button_submit);
 
-        first_question_ans.setOnKeyListener(editTextKeyListener);
+        first_question_ans.addTextChangedListener(editTextWatcher);
+        second_question_ans.addTextChangedListener(editTextWatcher);
+        third_question_ans.addTextChangedListener(editTextWatcher);
+        fourth_question_ans.addTextChangedListener(editTextWatcher);
+        fifth_question_ans.addTextChangedListener(editTextWatcher);
+        sixth_question_ans.addTextChangedListener(editTextWatcher);
+
         results = (TextView) findViewById(R.id.results);
     }
-
-    private View.OnKeyListener editTextKeyListener = new View.OnKeyListener(){
-
-        @Override
-        public boolean onKey(View view, int i, KeyEvent keyEvent) {
-
-            if(areAllFieldsFilled()){
-                button_submit.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            }else{
-                button_submit.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            }
-
-            return false;
-        }
-    };
 
     private boolean areAllFieldsFilled(){
         return  !first_question_ans.getText().toString().isEmpty() &&
@@ -107,4 +99,31 @@ public class QuestionaireMIDAS extends AppCompatActivity {
             results.setVisibility(View.GONE);
         }
     }
+
+    public void backPressed(View view) {
+        finish();
+    }
+
+    private TextWatcher editTextWatcher = new TextWatcher() {
+
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+            if(areAllFieldsFilled()){
+                button_submit.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            }else{
+                button_submit.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            }
+        }
+    };
+
 }

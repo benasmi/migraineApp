@@ -39,10 +39,10 @@ public class StartingActivity extends AwesomeSplash {
 
         configSplash.setTitleSplash("Pažink migreną!");
         configSplash.setTitleTextColor(R.color.text_color);
-        configSplash.setTitleTextSize(30f); //float value
+        configSplash.setTitleTextSize(20f); //float value
         configSplash.setAnimTitleDuration(500);
         configSplash.setAnimTitleTechnique(Techniques.SlideInUp);
-        configSplash.setTitleFont("fonts/futura.ttf"); //provide string to your font located in assets
+        configSplash.setTitleFont("fonts/verdana.ttf"); //provide string to your font located in assets
     }
 
     @Override
