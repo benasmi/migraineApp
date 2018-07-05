@@ -3,109 +3,106 @@ package com.solution.migraine.migrainenova;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import android.support.v7.widget.AppCompatButton;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 
 public class QuestionaireMIDAS extends AppCompatActivity {
 
-    private ImageView img_arrow_back;
-    private EditText first_question_ans;
-    private EditText second_question_ans;
-    private EditText third_question_ans;
-    private EditText fourth_question_ans;
-    private EditText fifth_question_ans;
-    private EditText sixth_question_ans;
-    private TextView results;
-    private ExpandableRelativeLayout expandable_layout_results;
+    private EditText et_first_question_ans;
+    private EditText et_second_question_ans;
+    private EditText et_third_question_ans;
+    private EditText et_fourth_question_ans;
+    private EditText et_fifth_question_ans;
+    private EditText et_sixth_question_ans;
 
-    private AppCompatButton button_submit;
+    private TextView txt_results;
+    private ExpandableRelativeLayout expandable_layout_results;
+    private AppCompatButton btn_submit;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionaire_midas);
+
+        //Changing the notification bar color programatically
         Utils.changeNotifBarColor(Color.parseColor("#6200EE"),getWindow());
+
         initializeViews();
     }
 
     private void initializeViews(){
-        img_arrow_back = (ImageView) findViewById(R.id.arrow_back);
-        img_arrow_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                QuestionaireMIDAS.this.finish();
-            }
-        });
+        et_first_question_ans = (EditText) findViewById(R.id.first_question_ans);
+        et_second_question_ans = (EditText) findViewById(R.id.second_question_ans);
+        et_third_question_ans = (EditText) findViewById(R.id.third_question_ans);
+        et_fourth_question_ans = (EditText) findViewById(R.id.fourth_question_ans);
+        et_fifth_question_ans = (EditText) findViewById(R.id.fifth_question_ans);
+        et_sixth_question_ans = (EditText) findViewById(R.id.sixth_question_ans);
 
-        first_question_ans = (EditText) findViewById(R.id.first_question_ans);
-        second_question_ans = (EditText) findViewById(R.id.second_question_ans);
-        third_question_ans = (EditText) findViewById(R.id.third_question_ans);
-        fourth_question_ans = (EditText) findViewById(R.id.fourth_question_ans);
-        fifth_question_ans = (EditText) findViewById(R.id.fifth_question_ans);
-        sixth_question_ans = (EditText) findViewById(R.id.sixth_question_ans);
-        button_submit = (AppCompatButton) findViewById(R.id.button_submit);
+        et_first_question_ans.addTextChangedListener(editTextWatcher);
+        et_second_question_ans.addTextChangedListener(editTextWatcher);
+        et_third_question_ans.addTextChangedListener(editTextWatcher);
+        et_fourth_question_ans.addTextChangedListener(editTextWatcher);
+        et_fifth_question_ans.addTextChangedListener(editTextWatcher);
+        et_sixth_question_ans.addTextChangedListener(editTextWatcher);
 
+        btn_submit = (AppCompatButton) findViewById(R.id.button_submit);
         expandable_layout_results = (ExpandableRelativeLayout) findViewById(R.id.expandable_layout_midas_results);
-
-        first_question_ans.addTextChangedListener(editTextWatcher);
-        second_question_ans.addTextChangedListener(editTextWatcher);
-        third_question_ans.addTextChangedListener(editTextWatcher);
-        fourth_question_ans.addTextChangedListener(editTextWatcher);
-        fifth_question_ans.addTextChangedListener(editTextWatcher);
-        sixth_question_ans.addTextChangedListener(editTextWatcher);
-
-        results = (TextView) findViewById(R.id.results);
+        txt_results = (TextView) findViewById(R.id.results);
     }
 
+    /**
+     * Checks whether or not all editTexts have texts in them.
+     * @return A boolean, which represents whether all editTexts are filled or not.
+     */
     private boolean areAllFieldsFilled(){
-        return  !first_question_ans.getText().toString().isEmpty() &&
-                !second_question_ans.getText().toString().isEmpty() &&
-                !third_question_ans.getText().toString().isEmpty() &&
-                !fourth_question_ans.getText().toString().isEmpty() &&
-                !fifth_question_ans.getText().toString().isEmpty() &&
-                !sixth_question_ans.getText().toString().isEmpty();
+        return  !et_first_question_ans.getText().toString().isEmpty() &&
+                !et_second_question_ans.getText().toString().isEmpty() &&
+                !et_third_question_ans.getText().toString().isEmpty() &&
+                !et_fourth_question_ans.getText().toString().isEmpty() &&
+                !et_fifth_question_ans.getText().toString().isEmpty() &&
+                !et_sixth_question_ans.getText().toString().isEmpty();
     }
+
 
     public void getResults(View view) {
         if(areAllFieldsFilled()){
 
+            //Calculating the total amount of days user presumably had headaches.
             int totalDays = 0;
-            totalDays+=Integer.valueOf(first_question_ans.getText().toString());
-            totalDays+=Integer.valueOf(second_question_ans.getText().toString());
-            totalDays+=Integer.valueOf(third_question_ans.getText().toString());
-            totalDays+=Integer.valueOf(fourth_question_ans.getText().toString());
-            totalDays+=Integer.valueOf(fifth_question_ans.getText().toString());
-            totalDays+=Integer.valueOf(sixth_question_ans.getText().toString());
+            totalDays+=Integer.valueOf(et_first_question_ans.getText().toString());
+            totalDays+=Integer.valueOf(et_second_question_ans.getText().toString());
+            totalDays+=Integer.valueOf(et_third_question_ans.getText().toString());
+            totalDays+=Integer.valueOf(et_fourth_question_ans.getText().toString());
+            totalDays+=Integer.valueOf(et_fifth_question_ans.getText().toString());
+            totalDays+=Integer.valueOf(et_sixth_question_ans.getText().toString());
 
+            //Concluding the diagnosis based on day count.
             String result = "";
-
             if(totalDays > 21){
-                result = "IV laipsnis. Labai didelė įtaka gyvenimo kokybei. Tikslinga svarstyti profilaktinio gydymo skyrimą.";
+                result = getString(R.string.fourth_degree_migraine);
             }else if(totalDays > 0 && totalDays <= 5){
-                result = "I laipsnis. Labai maža įtaka kasdieniai veiklai. Profilaktinis gydymas nedįdinkuotinas";
+                result = getString(R.string.first_degree_migraine);
             }else if(totalDays > 5 && totalDays <= 10){
-                result = "II laipsnis. Maža įtaka kasdienei veiklai. Profilaktinis gydymas gali būti svarstytinas esant galvos skausmui susijusiam su mėnesinių ciklu.";
+                result = getString(R.string.second_degree_migraine);
             }else if(totalDays > 10 && totalDays <= 20){
-                result = "III laipsnis Vidutine įtaka kasdienei veiklai. Profilaktinis gydymas gali būti svarstytinas esant galvos skausmui susijusiam su mėnesinių ciklu. ";
+                result = getString(R.string.third_degree_migraine);
             }
 
-            results.setText(result);
-            results.setVisibility(View.VISIBLE);
+            //Displaying the diagnosis
+            txt_results.setText(result);
             if(!expandable_layout_results.isExpanded()){
                 expandable_layout_results.expand();
             }
 
         }else{
-            results.setVisibility(View.GONE);
+            //Hiding the diagnosis
             if(expandable_layout_results.isExpanded()){
                 expandable_layout_results.collapse();
             }
@@ -116,6 +113,7 @@ public class QuestionaireMIDAS extends AppCompatActivity {
     public void backPressed(View view) {
         finish();
     }
+
 
     private TextWatcher editTextWatcher = new TextWatcher() {
 
@@ -131,10 +129,12 @@ public class QuestionaireMIDAS extends AppCompatActivity {
 
         @Override
         public void afterTextChanged(Editable editable) {
+
+            //Checking whether all fields are filled, and toggling the button accordingly.
             if(areAllFieldsFilled()){
-                button_submit.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                btn_submit.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             }else{
-                button_submit.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                btn_submit.setBackgroundColor(getResources().getColor(R.color.colorAccent));
             }
         }
     };

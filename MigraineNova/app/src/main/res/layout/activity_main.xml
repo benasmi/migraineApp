@@ -44,6 +44,7 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_below="@+id/my_toolbar"
+        android:id="@+id/main_grid_layout"
         android:layout_height="400dp"
         android:layout_marginTop="15dp"
         android:columnCount="2"
@@ -57,7 +58,7 @@
             android:layout_columnWeight="1"
             android:layout_margin="5dp"
             android:layout_rowWeight="1"
-            android:text="Migrenos diagnostikos klausimynas"
+            android:text="@string/migraine_diagnostics_questionaire_btn"
             android:textSize="20dp"
             android:padding="10dp"
             android:id="@+id/btn_migraine_diagnostics"
@@ -77,7 +78,7 @@
             android:onClick="btn_difficulty"
             android:textColor="#FFFFFF"
             android:id="@+id/btn_migraine_difficulty"
-            android:text="Migrenos sunkumo klausimynas"
+            android:text="@string/migraine_severity_questionaire_btn"
             android:textSize="20dp"
             android:textAllCaps="false"
             android:background="@drawable/rounded_button_questions"
@@ -86,7 +87,7 @@
 
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="Migrenos gydymo galimybės"
+            android:text="@string/migraine_treatment_btn"
             android:textSize="20dp"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
@@ -102,7 +103,7 @@
 
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="Migrenos migrenos dienynas"
+            android:text="@string/migraine_treatment_diary_btn"
             android:textSize="20dp"
             android:textColor="#FFFFFF"
             android:padding="10dp"
@@ -116,6 +117,43 @@
             />
 
     </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/main_grid_layout"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/question_1"
+            android:background="@drawable/rounded_button"
+            android:textColor="#fff"
+            android:padding="10dp"
+            android:onClick="question_1"
+            android:layout_margin="10dp"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/question_2"
+            android:background="@drawable/rounded_button"
+            android:textColor="#fff"
+            android:padding="10dp"
+            android:onClick="question_2"
+            android:layout_margin="10dp"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/question_3"
+            android:background="@drawable/rounded_button"
+            android:textColor="#fff"
+            android:padding="10dp"
+            android:onClick="question_3"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

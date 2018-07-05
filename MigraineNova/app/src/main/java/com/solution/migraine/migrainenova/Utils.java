@@ -8,22 +8,29 @@ import android.support.v7.app.AlertDialog;
 import android.view.Window;
 import android.view.WindowManager;
 
-/**
- * Created by Benas on 6/28/2018.
- */
-
 public class Utils {
 
-    public static void changeNotifBarColor(int color, Window window){
-
+    /**
+     * Changes the color of the notification bar
+     * @param color The color to change to
+     * @param window The target window
+     * @return A boolean, which represents whether the color was changed successfully
+     */
+    public static boolean changeNotifBarColor(int color, Window window){
         if (Build.VERSION.SDK_INT >= 21) {
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.setStatusBarColor(color);
+            return true;
         }
-
+        return false;
     }
 
+
+    /**
+     * Builds an alert dialog with a yes/no decision.
+     * If a given listener is null, a default listener, which dismisses the dialog on press, is used.
+     */
     public static void buildAlertDialogPrompt(Context context, String title, String message, String positiveButtonText, String negativeButtonText , @Nullable DialogInterface.OnClickListener positiveButtonListener, @Nullable DialogInterface.OnClickListener negativeButtonListener){
         AlertDialog.Builder builder;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

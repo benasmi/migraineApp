@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">MigraineNova</string>
+
+    <string name="first_degree_migraine">Labai maža įtaka kasdienei veiklai. Profilaktinis gydymas neindikuotinas (I laipsnis).</string>
+    <string name="second_degree_migraine">Maža įtaka kasdienei veiklai. Profilaktinis gydymas gali būti svarstytinas jei galvos skausmas susijęs su mėnesinių ciklu (II laipsnis).</string>
+    <string name="third_degree_migraine">Vidutinė įtaka kasdienei veiklai. Profilaktinis gydymas gali būti svarstytinas esant galvos skausmui susijusiam su mėnesinių ciklu (III laipsnis).</string>
+    <string name="fourth_degree_migraine">Labai didelė įtaka gyvenimo kokybei.Tikslinga svarstyti profilaktinio gydymo skyrimą (IV laipsnis).</string>
+
+    <string name="premium_alert_title_text">Oops...</string>
+    <string name="premium_alert_content_text">Šiam veiksmui atlikti reikalinga pilna versija!</string>
+    <string name="premium_alert_confirmation_text">Pirkti pilną versiją!</string>
+
+    <string name="cancel">Atšaukti</string>
+
+    <string name="migraine_diagnosis_1">Greičiausiai Jūs nesergate migrena.</string>
+    <string name="migraine_diagnosis_2">Galvos skausmo priežasties patikslinimui ir gydymo parinkimui tikslinga šeimos gydytojo ar neurologo konsultacija.</string>
+    <string name="migraine_diagnosis_3">Jūs greičiausiai sergate migrena. Rekomenduojame kreiptis į gydytoją neurologą, kuris Jums padės rasti geriausias priemones galvos skausmo kontrolei. Rekomenduojame prieš apsilankant pas neurologą užpildyti migrenos sunkumo klausimyną.</string>
+
+    <string name="question_1">Kodėl svarbu įvertinti migrenos sunkumą?</string>
+    <string name="question_2">Koks migrenos gydymas geriausias?</string>
+    <string name="question_3">Naujausia informacija apie migreną</string>
+
+    <string name="question_1_URL">http://neurology.lt/kodel-svarbu-ivertinti-migrenos-sunkumo-laipsni/</string>
+    <string name="question_2_URL">http://neurology.lt/koks-migrenos-gydymas-pats-geriausias/</string>
+    <string name="question_3_URL">http://neurology.lt/naujausia-informacija-apie-migrena/</string>
+
+    <string name="migraine_treatment_diary_btn">Migrenos migrenos dienynas</string>
+    <string name="migraine_treatment_btn">Migrenos gydymo galimybės</string>
+    <string name="migraine_severity_questionaire_btn">Migrenos sunkumo klausimynas</string>
+    <string name="migraine_diagnostics_questionaire_btn">Migrenos diagnostikos klausimynas</string>
 </resources>
