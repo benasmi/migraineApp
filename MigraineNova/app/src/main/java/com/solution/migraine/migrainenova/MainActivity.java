@@ -24,7 +24,11 @@ public class MainActivity extends AppCompatActivity {
     private AppCompatButton btn_migraine_diary;
     private AppCompatButton btn_migraine_treatment;
 
-    private boolean userHasPremium;
+    private AppCompatButton btn_question_1;
+    private AppCompatButton btn_question_2;
+    private AppCompatButton btn_question_3;
+
+    private boolean userHasPremium = false;
 
     //TODO: Move this variable to a class, which would manage database stuff.
     public static final String SHARED_PREFS_USER = "USER_PREFS";
@@ -50,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
         btn_migraine_difficulty = (AppCompatButton) findViewById(R.id.btn_migraine_difficulty);
         btn_migraine_treatment = (AppCompatButton) findViewById(R.id.btn_migraine_treatment);
         btn_migraine_diary = (AppCompatButton) findViewById(R.id.btn_migraine_diary);
+
+        btn_question_1 = (AppCompatButton) findViewById(R.id.question_1_btn);
+        btn_question_2 = (AppCompatButton) findViewById(R.id.question_2_btn);
+        btn_question_3 = (AppCompatButton) findViewById(R.id.question_3_btn);
     }
 
 
@@ -66,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
         btn_migraine_difficulty.startAnimation(fade_in);
         btn_migraine_treatment.startAnimation(fade_in);
         btn_migraine_diary.startAnimation(fade_in);
+        btn_question_1.startAnimation(fade_in);
+        btn_question_2.startAnimation(fade_in);
+        btn_question_3.startAnimation(fade_in);
 
     }
 

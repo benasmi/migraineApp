@@ -8,7 +8,7 @@
 
     <string name="premium_alert_title_text">Oops...</string>
     <string name="premium_alert_content_text">Šiam veiksmui atlikti reikalinga pilna versija!</string>
-    <string name="premium_alert_confirmation_text">Pirkti pilną versiją!</string>
+    <string name="premium_alert_confirmation_text">Pilna versija</string>
 
     <string name="cancel">Atšaukti</string>
 

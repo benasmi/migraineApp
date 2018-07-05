@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.solution.migraine.migrainenova.MainActivity">
+
+
+
 
 
     <android.support.v7.widget.Toolbar
@@ -41,9 +44,18 @@
 
     </android.support.v7.widget.Toolbar>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_below="@+id/my_toolbar"
         android:id="@+id/main_grid_layout"
         android:layout_height="400dp"
         android:layout_marginTop="15dp"
@@ -120,24 +132,26 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_below="@+id/main_grid_layout"
+        android:orientation="vertical"
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.AppCompatButton
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="@string/question_1"
             android:background="@drawable/rounded_button"
             android:textColor="#fff"
+            android:id="@+id/question_1_btn"
             android:padding="10dp"
             android:onClick="question_1"
             android:layout_margin="10dp"/>
 
         <android.support.v7.widget.AppCompatButton
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="@string/question_2"
             android:background="@drawable/rounded_button"
+            android:id="@+id/question_2_btn"
             android:textColor="#fff"
             android:padding="10dp"
             android:onClick="question_2"
@@ -145,8 +159,9 @@
 
         <android.support.v7.widget.AppCompatButton
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="@string/question_3"
+            android:id="@+id/question_3_btn"
             android:background="@drawable/rounded_button"
             android:textColor="#fff"
             android:padding="10dp"
@@ -155,5 +170,7 @@
 
     </LinearLayout>
 
+    </LinearLayout>
+    </ScrollView>
 
-</RelativeLayout>
+</LinearLayout>
