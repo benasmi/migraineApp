@@ -64,7 +64,7 @@
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textColor="#000"
-                    android:text="Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?"
+                    android:text="@string/midas_question_1"
                     />
 
 
@@ -93,7 +93,7 @@
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textColor="#000"
-                    android:text="Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo Jūsų darbingumas arba gebėjimas mokytis buvo labai sumažėjęs, t.y. per pusę arba daugiau (neskaičiuokite pirmojo klausimo dienų, kada nebuvote darbe arba mokymo įstaigoje)?"
+                    android:text="@string/midas_question_2"
                     />
 
 
@@ -120,7 +120,7 @@
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textColor="#000"
-                    android:text="Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo visiškai negalėjote užsiimti namų ruoša? "
+                    android:text="@string/midas_question_3"
                     />
 
 
@@ -147,7 +147,7 @@
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textColor="#000"
-                    android:text="Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo Jūsų gebėjimas užsiimti namų ruoša buvo labai sumažėjęs, t.y. per pusę arba daugiau (neskaičiuokite trečiojo klausimo dienų, kada visiškai negalėjote užsiimti namų ruoša)? "
+                    android:text="@string/midas_question_4"
                     />
 
 
@@ -174,7 +174,7 @@
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textColor="#000"
-                    android:text="Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo nebendravote su šeimos nariais, nukentėjo Jūsų visuomeninė veikla, laisvalaikis?"
+                    android:text="@string/midas_question_5"
                     />
 
 
@@ -201,7 +201,7 @@
                     android:textSize="18dp"
                     android:padding="10dp"
                     android:textColor="#000"
-                    android:text="Kiek dienų per paskutinius 3 mėnesius jums skaudėjo galvą?"
+                    android:text="@string/midas_question_6"
                     />
 
 
@@ -283,7 +283,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="I laipsnis. Labai maža įtaka kasdieniai veiklai. Profilaktinis gydymas nedįdinkuotinas"
             android:textColor="#fff"
             android:id="@+id/results"
             android:paddingLeft="10dp"

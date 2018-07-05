@@ -28,4 +28,10 @@
     <string name="migraine_treatment_btn">Migrenos gydymo galimybės</string>
     <string name="migraine_severity_questionaire_btn">Migrenos sunkumo klausimynas</string>
     <string name="migraine_diagnostics_questionaire_btn">Migrenos diagnostikos klausimynas</string>
+    <string name="midas_question_1">Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo visiškai nebuvote darbe arba mokymo įstaigoje?</string>
+    <string name="midas_question_2">Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo Jūsų darbingumas arba gebėjimas mokytis buvo labai sumažėjęs, t.y. per pusę arba daugiau (neskaičiuokite pirmojo klausimo dienų, kada nebuvote darbe arba mokymo įstaigoje)?</string>
+    <string name="midas_question_3">Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo visiškai negalėjote užsiimti namų ruoša?</string>
+    <string name="midas_question_4">Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo Jūsų gebėjimas užsiimti namų ruoša buvo labai sumažėjęs, t.y. per pusę arba daugiau (neskaičiuokite trečiojo klausimo dienų, kada visiškai negalėjote užsiimti namų ruoša)?</string>
+    <string name="midas_question_5">Kiek dienų per paskutinius 3 mėnesius dėl galvos skausmo nebendravote su šeimos nariais, nukentėjo Jūsų visuomeninė veikla, laisvalaikis?</string>
+    <string name="midas_question_6">Kiek dienų per paskutinius 3 mėnesius jums skaudėjo galvą?</string>
 </resources>

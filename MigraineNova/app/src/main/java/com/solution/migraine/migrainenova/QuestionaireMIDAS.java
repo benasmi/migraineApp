@@ -87,7 +87,7 @@ public class QuestionaireMIDAS extends AppCompatActivity {
             String result = "";
             if(totalDays > 21){
                 result = getString(R.string.fourth_degree_migraine);
-            }else if(totalDays > 0 && totalDays <= 5){
+            }else if(totalDays >= 0 && totalDays <= 5){
                 result = getString(R.string.first_degree_migraine);
             }else if(totalDays > 5 && totalDays <= 10){
                 result = getString(R.string.second_degree_migraine);
