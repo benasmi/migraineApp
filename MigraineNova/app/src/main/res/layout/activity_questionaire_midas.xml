@@ -30,7 +30,7 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:maxLines="1"
-            android:text="Migrenos sudėtingumas"
+            android:text="Galvos skausmo sunkumas"
             android:layout_gravity="left"
             android:textColor="#FFF"
             android:gravity="left"
@@ -42,7 +42,7 @@
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
-        android:layout_below="@+id/my_toolbar"
+        android:layout_below="@+id/expandable_layout_midas_results"
         android:layout_width="match_parent"
         android:layout_above="@+id/button_submit"
         android:layout_height="match_parent">
@@ -75,6 +75,7 @@
                     android:layout_marginLeft="10dp"
                     android:hint="Jūsų atsakymas"
                     android:inputType="number"
+                    android:maxLength="2"
                     android:id="@+id/first_question_ans" />
 
 
@@ -102,6 +103,7 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
                     android:inputType="number"
+                    android:maxLength="2"
                     android:hint="Jūsų atsakymas"
                     android:id="@+id/second_question_ans" />
 
@@ -126,6 +128,7 @@
                 <EditText
                     android:layout_width="250dp"
                     android:layout_height="50dp"
+                    android:maxLength="2"
                     android:inputType="number"
                     android:layout_marginLeft="10dp"
                     android:hint="Jūsų atsakymas"
@@ -154,6 +157,7 @@
                     android:layout_height="50dp"
                     android:inputType="number"
                     android:layout_marginLeft="10dp"
+                    android:maxLength="2"
                     android:hint="Jūsų atsakymas"
                     android:id="@+id/fourth_question_ans" />
 
@@ -180,6 +184,7 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="10dp"
                     android:inputType="number"
+                    android:maxLength="2"
                     android:hint="Jūsų atsakymas"
                     android:id="@+id/fifth_question_ans" />
 
@@ -207,6 +212,7 @@
                     android:layout_marginLeft="10dp"
                     android:hint="Jūsų atsakymas"
                     android:inputType="number"
+                    android:maxLength="2"
                     android:id="@+id/sixth_question_ans" />
 
             </LinearLayout>
@@ -246,16 +252,6 @@
         </LinearLayout>
 
 
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:padding="10dp"
-            android:textColor="#000"
-            android:visibility="gone"
-            android:id="@+id/results"/>
         </LinearLayout>
 
 
@@ -273,6 +269,29 @@
         android:textAllCaps="false"
         android:textColor="#fff" />
 
+
+
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/expandable_layout_midas_results"
+        android:layout_below="@+id/my_toolbar"
+        android:background="@color/colorPrimary"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="I laipsnis. Labai maža įtaka kasdieniai veiklai. Profilaktinis gydymas nedįdinkuotinas"
+            android:textColor="#fff"
+            android:id="@+id/results"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="18dp"/>
+
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
 
 </RelativeLayout>

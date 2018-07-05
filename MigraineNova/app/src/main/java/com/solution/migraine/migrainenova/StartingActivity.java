@@ -37,7 +37,7 @@ public class StartingActivity extends AwesomeSplash {
         configSplash.setAnimLogoSplashDuration(500); //int ms
         configSplash.setAnimLogoSplashTechnique(Techniques.FadeIn); //choose one form Techniques (ref: h
 
-        configSplash.setTitleSplash("Pažink migreną!");
+        configSplash.setTitleSplash("Pažink galvos skausmą!");
         configSplash.setTitleTextColor(R.color.text_color);
         configSplash.setTitleTextSize(20f); //float value
         configSplash.setAnimTitleDuration(500);

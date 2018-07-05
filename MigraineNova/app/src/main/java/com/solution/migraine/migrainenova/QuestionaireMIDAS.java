@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
+
 public class QuestionaireMIDAS extends AppCompatActivity {
 
     private ImageView img_arrow_back;
@@ -22,6 +24,7 @@ public class QuestionaireMIDAS extends AppCompatActivity {
     private EditText fifth_question_ans;
     private EditText sixth_question_ans;
     private TextView results;
+    private ExpandableRelativeLayout expandable_layout_results;
 
     private AppCompatButton button_submit;
 
@@ -50,6 +53,8 @@ public class QuestionaireMIDAS extends AppCompatActivity {
         fifth_question_ans = (EditText) findViewById(R.id.fifth_question_ans);
         sixth_question_ans = (EditText) findViewById(R.id.sixth_question_ans);
         button_submit = (AppCompatButton) findViewById(R.id.button_submit);
+
+        expandable_layout_results = (ExpandableRelativeLayout) findViewById(R.id.expandable_layout_midas_results);
 
         first_question_ans.addTextChangedListener(editTextWatcher);
         second_question_ans.addTextChangedListener(editTextWatcher);
@@ -95,9 +100,17 @@ public class QuestionaireMIDAS extends AppCompatActivity {
 
             results.setText(result);
             results.setVisibility(View.VISIBLE);
+            if(!expandable_layout_results.isExpanded()){
+                expandable_layout_results.expand();
+            }
+
         }else{
             results.setVisibility(View.GONE);
+            if(expandable_layout_results.isExpanded()){
+                expandable_layout_results.collapse();
+            }
         }
+
     }
 
     public void backPressed(View view) {

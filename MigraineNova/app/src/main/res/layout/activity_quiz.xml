@@ -34,8 +34,9 @@
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:text="Ar sergate migrena?"
+                android:text="Ar patiriate migreną?"
                 android:layout_gravity="left"
+                android:visibility="gone"
                 android:textColor="#FFF"
                 android:gravity="left"
                 android:textSize="20dp"
@@ -61,14 +62,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="Ar turite priepuolius Galvos skausmus?"
+                    android:text="Ar patiriate priepuolinius galvos skausmus?"
                     android:textColor="#000"
                     android:textSize="20sp"
                     android:gravity="center_vertical"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="10dp"
-                    android:id="@+id/text_view_question"
-                    android:layout_toRightOf="@+id/image_view_question_indicator"/>
+                    android:id="@+id/text_view_question"/>
 
             </RelativeLayout>
 
@@ -115,18 +115,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                android:id="@+id/text_view_question"
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="Ar turite galvos skausmus, kurie sutrikdo Jūsų darbingumą?"
+                    android:text="Ar patiriate galvos skausmus, kurie sutrikdo Jūsų darbingumą?"
                     android:textColor="#000"
                     android:textSize="20sp"
                     android:gravity="center_vertical"
                     android:layout_alignParentTop="true"
-                    android:layout_marginLeft="10dp"
-                    android:id="@+id/text_view_question"
-                    android:layout_toRightOf="@+id/image_view_question_indicator"/>
+                    android:layout_marginLeft="10dp"/>
 
             </RelativeLayout>
 
@@ -177,14 +176,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="Ar turite su savimi Vaistų nuo Skausmo?"
+                    android:text="Ar įprastai turite su savimi vaistų nuo skausmo?"
                     android:textColor="#000"
                     android:textSize="20sp"
                     android:gravity="center_vertical"
                     android:layout_alignParentTop="true"
-                    android:layout_marginLeft="10dp"
-                    android:id="@+id/text_view_question"
-                    android:layout_toRightOf="@+id/image_view_question_indicator"/>
+                    android:layout_marginLeft="10dp"/>
 
             </RelativeLayout>
 

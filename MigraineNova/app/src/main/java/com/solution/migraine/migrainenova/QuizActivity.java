@@ -105,7 +105,7 @@ public class QuizActivity extends AppCompatActivity {
             if(positiveCount()==3){
                 textView_diagnosis.setText("Jūs sergate Migrena, kreipkitės į savo gydytoją dėl gydymo ir formos patikslinimo.");
             }else if(positiveCount()==2){
-                textView_diagnosis.setText("Dėl papildomo diagnozės patikslinimo reikia atlikti tyrimus, kuriuos Jums pasiulys Šeimos Gydytojas.");
+                textView_diagnosis.setText("Galvos skausmo priežasties patikslinimui tikslinga šeimos gydytojo ar neurologo konsultacija");
             }else if(positiveCount()==1 || positiveCount()==0){
                 textView_diagnosis.setText("Jūs nesergate migrena.");
             }
